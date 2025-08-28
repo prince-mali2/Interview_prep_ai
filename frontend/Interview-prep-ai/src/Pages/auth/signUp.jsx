@@ -16,6 +16,9 @@ const signUp = ({setCurrentPage}) => {
 
   //handle Signup Form Submit
   const handleSignUp = async(e)=>{
+     
+    e.preventDefault();
+  
   }
   
   return (
@@ -57,7 +60,7 @@ const signUp = ({setCurrentPage}) => {
        <p className="text-[13px] text-slate-800 mt-3">
          Already an account?{" "}
          <button className="font-medium text-primary underline cursor-pointer" onClick={()=>{
-           setCurrrentPage("login")
+           setCurrentPage("login")
          }}
          >Login</button>
        </p>

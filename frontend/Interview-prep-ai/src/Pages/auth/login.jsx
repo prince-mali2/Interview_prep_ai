@@ -15,6 +15,15 @@ const login = ({setCurrentPage}) => {
     e.preventDefault();
   };
 
+  // if(!validateEmail(email)){
+  //   setError("Please enter a valid email address");
+  //   return;
+  // }
+
+  // if(!password){
+  //   setError("Please")
+  // }
+
   return (
     <div className="w-[90vw] md:w-[33vw] p-7 flex flex-col justify-center">
       <h3 className="text-lg font-semibold txt-black">Welcome Back</h3>
