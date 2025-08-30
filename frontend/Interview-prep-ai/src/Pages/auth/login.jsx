@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Input from '../../components/Inputs/Input';
+import { validateEmail } from '../../utils/helper';
 
 const login = ({setCurrentPage}) => {
   const [email,setEmail] = useState("");
@@ -10,19 +11,32 @@ const login = ({setCurrentPage}) => {
   const navigate = useNavigate();
 
   //Handle Login Form Submit
-
   const handleLogin = async(e)=>{
     e.preventDefault();
+
+    if(!validateEmail(email)){
+      setError("Please enter a valid email address");
+      return;
+    }
+    
+    if(!password){
+      setError("Please enter the password");
+      return;
+    }
+    setError("");
+    
+    //Login API call
+    try{
+      
+    }catch(error){
+      if(error.response && error.response.data.message){
+        setError(error.response.data.message);
+      }
+      else{
+        setError("Something went Wrong, Please try again.");
+      }
+    }
   };
-
-  // if(!validateEmail(email)){
-  //   setError("Please enter a valid email address");
-  //   return;
-  // }
-
-  // if(!password){
-  //   setError("Please")
-  // }
 
   return (
     <div className="w-[90vw] md:w-[33vw] p-7 flex flex-col justify-center">
