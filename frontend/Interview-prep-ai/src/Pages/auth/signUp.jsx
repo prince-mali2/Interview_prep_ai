@@ -72,14 +72,14 @@ const signUp = ({setCurrentPage}) => {
          />
          <Input
          value={email}
-         onChange={({target})=>setFullName(target.value)}
+         onChange={({target})=>setEmail(target.value)}
          label="Email address"
          placeholder="John@example.in"
          type="text"
          />
          <Input
          value={password}
-         onChange={({target})=>setFullName(target.value)}
+         onChange={({target})=>setPassword(target.value)}
          label="Password"
          placeholder="Min 8 characters"
          type="password"

@@ -11,7 +11,7 @@ const Input = ({value , onChange, label, placeholder, type}) => {
 
     <div className="input-box">
         <input type={
-           type == "password" ? (showPassword ? "text" : "passowrd") : type
+           type == "password" ? (showPassword ? "text" : "password") : type
         } 
         placeholder = {placeholder}
         className='w-full bg-transparent outline-none'
