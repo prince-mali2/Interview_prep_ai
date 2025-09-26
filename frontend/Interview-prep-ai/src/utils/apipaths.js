@@ -13,14 +13,14 @@ export const API_PATHS = {
 
     AI:{
         GENERATE_QUESTIONS: 'api/ai/generate-questions',//Generate interview questions and answer using gemini
-        GENERATE_EXPLANATION: "/api/ai/generate-explanation", //Generate concept explanation using gemini
+        GENERATE_EXPLANATION: "/api/ai/generate-explanations", //Generate concept explanation using gemini
     },
 
     SESSION: {
         CREATE: "/api/sessions/create", // CReate a new interview session with questions
         GET_ALL : "/api/sessions/my-sessions",//Get all user session
         GET_ONE: (id)=> `/api/sessions/${id}`,//Get session details with questions
-        DELETE: (id)=>`/api/session/${id}`, //DELETE a session
+        DELETE: (id)=>`/api/sessions/${id}`, //DELETE a session
     },
 
     QUESTION: {

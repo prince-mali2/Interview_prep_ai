@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import HERO_PNG from "../assets/hero-img.png"
 import { APP_FEATURES } from '../utils/data'
 import { useNavigate } from 'react-router-dom'
@@ -6,14 +6,23 @@ import {LuSparkles} from 'react-icons/lu';
 import Modal from '../components/Modal';
 import Login from './auth/login';
 import SignUp from './auth/signUp';
+import { UserContext } from '../context/userContext';
+import ProfileInfoCard from '../components/Cards/ProfileInfoCard';
 
 const landing = () => {
+  const {user} = useContext(UserContext);
   const navigate = useNavigate();
 
   const [openAuthModal, setOpenAuthmodal] = useState(false);
   const [currentPage, setCurrentPage] = useState("login");
 
-  const handleCTA =() =>{};
+  const handleCTA =() =>{
+    if(!user){
+      setOpenAuthmodal(true);
+    }else{
+      navigate('/dashboard');
+    }
+  };
   return (
     <>
     <div className='w-full min-h-full bg-[#FFFCEF]'>
@@ -25,10 +34,16 @@ const landing = () => {
         <div className='text-xl text-black font-bold'>
           Interview Prep AI
         </div>
+
+        {user ? (
+          <ProfileInfoCard/>
+        ):(
         <button 
         className='bg-gradient-to-r from-[#FF9324] to-[#e99a4b] text-sm font-semibold text-white px-7 py-2.5 rounded-full hover:from-black hover:to-black hover:text-white border border-white transition-colors cursor-pointer'
         onClick={()=>setOpenAuthmodal(true)}
         >Login / Sign Up</button>
+        )}
+        
          {/* gradient has higher precendence so normal hover will not override it */}
         </header>
  
@@ -71,7 +86,7 @@ const landing = () => {
     <div className="w-full min-h-full relative z-10 ">
       <div>
         <section className='flex items-center justify-center -mt-36'>
-        <img src={HERO_PNG} alt="Hero Image" className='w-[80vw] rounded-lg' />
+        <img src={HERO_PNG} alt="Hero Image"  className='w-[80vw] rounded-lg border border-[#cfb756] shadow-md' />
         </section>
       </div>
     </div>

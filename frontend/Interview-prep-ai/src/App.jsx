@@ -7,12 +7,14 @@ import SignUp from './Pages/auth/signUp';
 import Landing from './Pages/landing';
 import Dashboard from './Pages/home/dashboard';
 import InterviewPrep from './Pages/interviewprep/interviewprep';
+import UserProvider from './context/userContext';
 
 
 function App() {
 
 
   return (
+    <UserProvider>
     <div>
       <Router>
         <Routes>
@@ -33,6 +35,7 @@ function App() {
         }}
         />
     </div>
+    </UserProvider>
   )
 }
 
