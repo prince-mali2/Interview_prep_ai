@@ -1,4 +1,4 @@
-export const BASE_URL = "https://interview-prep-ai-ki57.onrender.com";
+export const BASE_URL = "https://interview-prep-ai-backend-nm9e.onrender.com";
 
 export const API_PATHS = {
     AUTH:{
