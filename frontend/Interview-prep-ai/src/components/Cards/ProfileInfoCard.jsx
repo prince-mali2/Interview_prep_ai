@@ -17,11 +17,13 @@ const ProfileInfoCard = () => {
     user && (
       <div className="flex items-center">
         {/* Profile Image with fallback */}
-        <img
-          src={!user?.profileImageUrl ? DUMMY_AVATAR : user.profileImageUrl  }
-          alt="Dummy"
-          className="w-11 h-11 bg-gray-300 rounded-full mr-3 object-cover border border-gray-200"
-        />
+
+          <img
+            src={user?.profileImageUrl || DUMMY_AVATAR}
+            alt="Profile"
+            className="w-11 h-11 bg-gray-300 rounded-full mr-3 object-cover border border-gray-200"
+            onError={(e) => (e.currentTarget.src = DUMMY_AVATAR)}
+          />
 
         {/* User Info */}
         <div>
