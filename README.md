@@ -6,7 +6,7 @@ This platform helps candidates practice, analyze, and improve their technical an
 ---
 
 ## 🌐 Live Demo
-Explore the live version here: **[Interview_Prep_AI Live](YOUR_DEPLOYMENT_LINK_HERE)**  
+Explore the live version here: **[Interview_Prep_AI Live]([YOUR_DEPLOYMENT_LINK_HERE](https://interview-prep-ai-hoke.onrender.com/))**  
 *(Replace once deployed)*
 
 ---
@@ -53,18 +53,47 @@ Follow these steps to run Interview_Prep_AI locally:
 ```bash
 git clone https://github.com/prince-mali2/Interview_Prep_AI.git
 cd Interview_Prep_AI
+```
 
-### 2. Clone the Repository
+### 2. Install Dependencies
 ```bash
-git clone https://github.com/prince-mali2/Interview_Prep_AI.git
-cd Interview_Prep_AI
+npm install
+```
 
-### 3. Clone the Repository
+### 3. Add Environment Variables
+- Create a .env file and add:
 ```bash
-git clone https://github.com/prince-mali2/Interview_Prep_AI.git
-cd Interview_Prep_AI
+REACT_APP_API_KEY=your_api_key_here
+BACKEND_URL=your_backend_link_here
+```
 
-### 4. Clone the Repository
+### 4. Start the Development Server
 ```bash
-git clone https://github.com/prince-mali2/Interview_Prep_AI.git
-cd Interview_Prep_AI
+npm start
+```
+
+Access the App:
+Visit http://localhost:3000 in your browser.
+
+## 🌟 Highlights
+- 🔍 Smart filtering for coding, HR, and technical topics
+- 🚀 Instant AI-generated answers and explanations
+- 🧩 Suitable for freshers and experienced candidates
+- 📈 Real-time tips to improve communication and problem-solving
+- 🔄 Modern, responsive UI with smooth navigation
+  
+## 🎯 Future Enhancements
+- 🎙️ Voice-based mock interviews
+- 📁 Resume analyzer & AI-powered improvement suggestions
+- 🧠 Personalized learning path based on performance trends
+
+
+## 📧 Contact
+- For queries, feedback, or collaborations, feel free to reach out:
+
+Name: Prince Mali
+
+Email: princemali019@gmail.com
+
+LinkedIn: https://www.linkedin.com/in/prince-mali/
+
