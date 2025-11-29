@@ -6,8 +6,8 @@ This platform helps candidates practice, analyze, and improve their technical an
 ---
 
 ## 🌐 Live Demo
-Explore the live version here: **[Interview_Prep_AI Live]([YOUR_DEPLOYMENT_LINK_HERE](https://interview-prep-ai-hoke.onrender.com/))**  
-*(Replace once deployed)*
+Explore the live version here: **[Interview_Prep_AI Live](https://interview-prep-ai-hoke.onrender.com/)**  
+
 
 ---
 
