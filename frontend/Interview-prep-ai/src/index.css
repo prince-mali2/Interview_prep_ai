@@ -18,6 +18,9 @@
     background-color: #fcfbfc;
     overflow-x: hidden;
   }
+  html.dark body {
+    background-color: #111827;
+  }
 }
 
 /* Scrollbar */

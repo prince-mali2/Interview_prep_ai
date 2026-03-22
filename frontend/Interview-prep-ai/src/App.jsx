@@ -8,34 +8,37 @@ import Landing from './Pages/landing';
 import Dashboard from './Pages/home/dashboard';
 import InterviewPrep from './Pages/interviewprep/interviewprep';
 import UserProvider from './context/userContext';
+import ThemeProvider from './context/themeContext';
 
 
 function App() {
 
 
   return (
-    <UserProvider>
-    <div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Landing/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/signUp" element={<SignUp/>}/>
-          <Route path="/dashboard" element={<Dashboard/>}/>
-          <Route path="/interview-prep/:sessionId" element={<InterviewPrep/>}/>
-        </Routes>
-      </Router>
+    <ThemeProvider>
+      <UserProvider>
+        <div>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Landing/>}/>
+              <Route path="/login" element={<Login/>}/>
+              <Route path="/signUp" element={<SignUp/>}/>
+              <Route path="/dashboard" element={<Dashboard/>}/>
+              <Route path="/interview-prep/:sessionId" element={<InterviewPrep/>}/>
+            </Routes>
+          </Router>
 
-      <Toaster
-        toastOptions={{
-          className:"",
-          style:{
-            fontSize: "13px",
-          }
-        }}
-        />
-    </div>
-    </UserProvider>
+          <Toaster
+            toastOptions={{
+              className:"",
+              style:{
+                fontSize: "13px",
+              }
+            }}
+            />
+        </div>
+      </UserProvider>
+    </ThemeProvider>
   )
 }
 

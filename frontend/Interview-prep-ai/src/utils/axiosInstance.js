@@ -36,8 +36,9 @@ axiosInstance.interceptors.response.use(
             if(error.response.status===401){
                 //Redirect to login Page
                 window.location.href ="/";
-            }else if(error.response.status ===500){
-                console.error("Server error. Please try again later.");
+            } else if (error.response.status >= 500) {
+                const msg = error.response?.data?.message;
+                console.error("Server error. Please try again later.", msg || "");
             }
         }
         else{
