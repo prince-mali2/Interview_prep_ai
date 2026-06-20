@@ -4,10 +4,7 @@ const { conceptExplainprompt, questionAnswerPrompt } = require("../utils/prompts
 // Lazy-init AI client so missing API key is caught at request time with a clear error
 function getAI() {
     const apiKey = process.env.GEMINI_API_KEY;
-     console.log(
-        "Using Gemini key:",
-        apiKey ? apiKey.slice(0, 10) : "NOT FOUND"
-    );
+  
     
     if (!apiKey || apiKey.trim() === '') {
         const err = new Error('GEMINI_API_KEY is not set. Add it in Render Dashboard → Environment.');
