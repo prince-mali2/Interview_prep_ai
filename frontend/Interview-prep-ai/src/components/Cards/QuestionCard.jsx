@@ -54,6 +54,10 @@ const QuestionCard = ({
                     )}    
                     </button>
 
+
+
+
+
                     <button className="flex items-center gap-2 text-xs text-cyan-800 font-medium bg-cyan-50 px-3 py-1 mr-2 rounded text-nowrap border border-cyan-50 hover:border-cyan-200 cursor-pointer"
                     onClick={()=>{
                         setIsExpanded(true)
@@ -63,6 +67,10 @@ const QuestionCard = ({
                         <LuSparkles/>
                         <span className="hidden md:block">Learn More</span>
                     </button>
+
+
+
+
                 </div>
                <button className="text-gray-400 hover:text-gray-500 cursor-pointer"
                onClick={toggleExpand}

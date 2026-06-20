@@ -15,7 +15,7 @@ function App() {
 
 
   return (
-    <ThemeProvider>
+
       <UserProvider>
         <div>
           <Router>
@@ -38,7 +38,7 @@ function App() {
             />
         </div>
       </UserProvider>
-    </ThemeProvider>
+
   )
 }
 

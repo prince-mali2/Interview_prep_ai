@@ -10,10 +10,11 @@ const router = express.Router();
 
 router.post("/register", registerUser); // Register User
 router.post("/login", loginUser); //Login User
+
 router.get("/profile",protect, getUserProfile); // get User Profile
 
 router.post("/upload-image", upload.single("image"), (req,res)=>{
-    if(!req.file){
+    if(!req.file){ 
         return res.status(400).json({message: "No file uploaded"});
     }
 
